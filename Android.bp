@@ -35,7 +35,8 @@ cc_defaults {
     cflags: [
         "-DHAVE_SECUREBITS_H",
         "-Wall",
-        "-Werror",
+        "-Wno-unused-parameter",
+        "-Wno-unused-function",
     ],
     target: {
         darwin: {
@@ -54,7 +55,7 @@ cc_object {
         "-dD",
         "-E",
         "-Wall",
-        "-Werror",
+        "-Wno-unused-parameter",
     ],
 }
 
@@ -75,7 +76,7 @@ cc_object {
         "-dD",
         "-E",
         "-Wall",
-        "-Werror",
+        "-Wno-unused-parameter",
     ],
 }
 

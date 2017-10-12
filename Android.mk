@@ -30,7 +30,7 @@ hostUnittestSrcFiles := \
 	linux-x86/libconstants.gen.c \
 	linux-x86/libsyscalls.gen.c
 
-minijailCommonCFlags := -DHAVE_SECUREBITS_H -Wall -Werror
+minijailCommonCFlags := -DHAVE_SECUREBITS_H -Wall
 minijailCommonLibraries := libcap
 
 

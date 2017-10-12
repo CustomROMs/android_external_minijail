@@ -28,6 +28,7 @@ struct local_sigsys {
 
 void log_sigsys_handler(int nr, siginfo_t *info, void *void_context)
 {
+#if 0
 	struct local_sigsys sigsys;
 	const char *syscall_name;
 	memcpy(&sigsys, &info->_sifields, sizeof(sigsys));
@@ -46,10 +47,12 @@ void log_sigsys_handler(int nr, siginfo_t *info, void *void_context)
 	 */
 	for (;;)
 		_exit(1);
+#endif
 }
 
 int install_sigsys_handler()
 {
+#if 0
 	int ret = 0;
 	struct sigaction act;
 	sigset_t mask;
@@ -69,5 +72,6 @@ int install_sigsys_handler()
 	if (ret < 0)
 		return ret;
 
+#endif
 	return 0;
 }
